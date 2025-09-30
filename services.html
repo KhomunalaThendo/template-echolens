@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — EchoLens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="logo-mark">◈</span><span class="brand-text">EchoLens</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="actions"><button class="btn primary" id="bookNowBtn2">Book Now</button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container services-hero">
+      <h1 class="section-title">Our Services</h1>
+      <p class="muted">Explore our comprehensive range of photography, videography, and DJ packages tailored to meet your event needs.</p>
+    </section>
+
+    <section class="container packages">
+      <h2>Photography Packages</h2>
+      <div class="cards-grid">
+        <div class="card package">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=70&auto=format&fit=crop" alt="">
+          <div class="card-body">
+            <h3>Basic Package</h3>
+            <p>4 hours of coverage, one professional photographer.</p>
+            <div class="price">$1,200</div>
+            <button class="btn" data-package="Photography — Basic">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card package highlight">
+          <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=1200&q=70&auto=format&fit=crop" alt="">
+          <div class="card-body">
+            <h3>Standard Package <span class="badge">Most Popular</span></h3>
+            <p>6 hours, two photographers, larger image selection.</p>
+            <div class="price">$2,000</div>
+            <button class="btn primary" data-package="Photography — Standard">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card package">
+          <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=1200&q=70&auto=format&fit=crop" alt="">
+          <div class="card-body">
+            <h3>Premium Package</h3>
+            <p>8 hours, two photographers, custom photo album.</p>
+            <div class="price">$3,500</div>
+            <button class="btn" data-package="Photography — Premium">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container packages">
+      <h2>Videography Packages</h2>
+      <div class="cards-grid">
+        <div class="card package">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=70&auto=format&fit=crop" alt="">
+          <div class="card-body">
+            <h3>Standard Videography</h3>
+            <p>6 hours, highlight reel and drone footage where possible.</p>
+            <div class="price">$2,800</div>
+            <button class="btn" data-package="Videography — Standard">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card package">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=70&auto=format&fit=crop" alt="">
+          <div class="card-body">
+            <h3>Premium Videography</h3>
+            <p>8 hours, documentary style video and highlight reel.</p>
+            <div class="price">$4,500</div>
+            <button class="btn" data-package="Videography — Premium">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container packages">
+      <h2>DJ Services</h2>
+      <div class="cards-grid">
+        <div class="card package">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1200&q=70&auto=format&fit=crop" alt="">
+          <div class="card-body">
+            <h3>Standard DJ</h3>
+            <p>6 hours of DJ service and basic lighting.</p>
+            <div class="price">$1,300</div>
+            <button class="btn" data-package="DJ — Standard">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card package">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=70&auto=format&fit=crop" alt="">
+          <div class="card-body">
+            <h3>Premium DJ</h3>
+            <p>8 hours, top-tier sound, custom playlist and lighting.</p>
+            <div class="price">$2,000</div>
+            <button class="btn" data-package="DJ — Premium">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year2"></span> EchoLens. All rights reserved.</div>
+      <div class="socials">Instagram • Facebook • Twitter</div>
+    </div>
+  </footer>
+
+  <div class="modal" id="bookingModal2" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle2">
+      <button class="modal-close" id="modalClose2">✕</button>
+      <h3 id="modalTitle2">Book a Service</h3>
+      <form id="bookingForm2">
+        <label><span>Full name</span><input name="fullname" required></label>
+        <label><span>Email</span><input type="email" name="email" required></label>
+        <label><span>Service</span>
+          <select name="service">
+            <option>Photography — Basic</option>
+            <option>Photography — Standard</option>
+            <option>Videography — Standard</option>
+            <option>DJ — Standard</option>
+          </select>
+        </label>
+        <div class="center">
+          <button class="btn primary" type="submit">Submit Booking</button>
+        </div>
+        <p id="bookingResult2" class="muted"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

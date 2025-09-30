@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EchoLens — Capture Your Vision</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="logo-mark">◈</span>
+        <span class="brand-text">EchoLens</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn primary" id="bookNowBtn">Book Now</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <h1>Capture Your Vision with EchoLens</h1>
+        <p class="lead">Elevate your event with our expert photography, videography, and DJ services. We specialize in creating unforgettable experiences.</p>
+        <div class="hero-actions">
+          <button class="btn primary" id="heroBook">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="container services-preview">
+      <h2 class="section-title">Our Services</h2>
+
+      <div class="cards-grid">
+        <div class="card service-card">
+          <div class="card-icon">📸</div>
+          <h3>Photography</h3>
+          <p>Professional photography for events, portraits and more.</p>
+        </div>
+
+        <div class="card service-card">
+          <div class="card-icon">🎥</div>
+          <h3>Videography</h3>
+          <p>High-quality videography to capture your special moments.</p>
+        </div>
+
+        <div class="card service-card">
+          <div class="card-icon">🎧</div>
+          <h3>DJ Services</h3>
+          <p>Experienced DJs to keep your event lively and memorable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENT WORK / PORTFOLIO PREVIEW -->
+    <section class="container portfolio-preview">
+      <h2 class="section-title">Recent Work</h2>
+      <div class="portfolio-row">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=80&auto=format&fit=crop" alt="wedding" />
+        <img src="https://images.unsplash.com/photo-1519183071298-a2962be54a91?w=1200&q=80&auto=format&fit=crop" alt="camera" />
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1200&q=80&auto=format&fit=crop" alt="dj" />
+      </div>
+      <div class="center">
+        <a class="btn" href="portfolio.html">View Portfolio</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container about">
+      <h2 class="section-title">About Us</h2>
+      <p class="muted">EchoLens is a premier provider of photography, videography, and DJ services, dedicated to capturing the essence of your special events.</p>
+      <div class="center">
+        <a class="btn" href="services.html">Learn More</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container contact">
+      <h2 class="section-title">Contact Us</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Your Name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        </label>
+        <div class="center">
+          <button class="btn primary" type="submit">Send Message</button>
+        </div>
+        <p id="contactResult" class="muted" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> EchoLens. All rights reserved.</div>
+      <div class="socials">Instagram • Facebook • Twitter</div>
+    </div>
+  </footer>
+
+  <!-- Simple booking modal -->
+  <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h3 id="modalTitle">Book a Service</h3>
+      <form id="bookingForm">
+        <label><span>Full name</span><input name="fullname" required></label>
+        <label><span>Email</span><input type="email" name="email" required></label>
+        <label><span>Service</span>
+          <select name="service">
+            <option>Photography — Basic</option>
+            <option>Photography — Standard</option>
+            <option>Videography — Standard</option>
+            <option>DJ — Standard</option>
+          </select>
+        </label>
+        <div class="center">
+          <button class="btn primary" type="submit">Submit Booking</button>
+        </div>
+        <p id="bookingResult" class="muted"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
