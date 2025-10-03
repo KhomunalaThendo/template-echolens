@@ -85,6 +85,10 @@ body{
   position:relative;
   padding:96px 0 64px;
   overflow:hidden;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero-bg{
   position:absolute; inset:0;
