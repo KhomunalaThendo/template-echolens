@@ -155,6 +155,7 @@ body{
 }
 .img-card{
   width: 25vw;
+  border-radius: var(--radius);
 }
 .service-card .card-icon{font-size:1.8rem; background:rgba(255,255,255,0.02); padding:10px; border-radius:10px; display:inline-block; margin-bottom:8px}
 .service-card h3{margin:6px 0}
@@ -249,6 +250,14 @@ body{
 }
 .abtImg{
   width: 95vw;
+  border-radius: var(--radius);
+}
+.card-img{
+  display: flex;
+  align-items: center;
+}
+.img-card{
+  width: 90vw;
   border-radius: var(--radius);
 }
 
